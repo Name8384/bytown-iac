@@ -1,0 +1,4 @@
+Q1: Terraform detected configuration drift and recreated the missing container during apply. You have to change the infrastructure through code to prevent drift, avoid unrepeatable snowflake setups, and keep Git as the single source of truth.
+Q2: terraform.tfstate is not committed because it can contain sensitive secrets in plain text and causes merge conflicts or out-of-date infrastructure tracking if shared through Git instead of a remote backend.
+Q3: The difference between Terraform and Ansible is that Terraform is an infrastructure provisioning tool that creates and manages resources like VMs and networks, while Ansible is a configuration management tool that installs software and configures settings inside existing servers.
+Q4: The cloud provider secures the physical data centre and underlying hardware, while you secure the guest operating system patches, firewall rules, and applications running inside the VM.
