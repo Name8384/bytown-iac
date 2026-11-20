@@ -1,0 +1,81 @@
+docker_network.lab: Refreshing state... [id=718aa67df665adf7817996cfbbfc67988fae642d6f7000a7e73ddf2a2d33c148]
+docker_image.nginx: Refreshing state... [id=sha256:fb4658584bd9a916ffb6f6e365f97c25cfdb2923801f551ea08356e695f14ff7nginx:alpine]
+docker_container.web[1]: Refreshing state... [id=8ef3e6ab09f11855b33192b284aa5542b9887cc19aad8112ea2155e1ade1bb3b]
+docker_container.web[0]: Refreshing state... [id=8f9374fafe2fae122ddb0f86b58a0b880f208d7c87d3d6b3e3ecac92d1183c18]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # docker_container.web[1] will be created
+  + resource "docker_container" "web" {
+      + attach                                      = false
+      + bridge                                      = (known after apply)
+      + command                                     = (known after apply)
+      + container_logs                              = (known after apply)
+      + container_read_refresh_timeout_milliseconds = 15000
+      + entrypoint                                  = (known after apply)
+      + env                                         = (known after apply)
+      + exit_code                                   = (known after apply)
+      + hostname                                    = (known after apply)
+      + id                                          = (known after apply)
+      + image                                       = "sha256:fb4658584bd9a916ffb6f6e365f97c25cfdb2923801f551ea08356e695f14ff7"
+      + init                                        = (known after apply)
+      + ipc_mode                                    = (known after apply)
+      + log_driver                                  = (known after apply)
+      + logs                                        = false
+      + memory_reservation                          = 0
+      + must_run                                    = true
+      + name                                        = "bytown-tf-26-1"
+      + network_data                                = (known after apply)
+      + network_mode                                = "bridge"
+      + read_only                                   = false
+      + remove_volumes                              = true
+      + restart                                     = "no"
+      + rm                                          = false
+      + runtime                                     = (known after apply)
+      + security_opts                               = (known after apply)
+      + shm_size                                    = (known after apply)
+      + start                                       = true
+      + stdin_open                                  = false
+      + stop_signal                                 = (known after apply)
+      + stop_timeout                                = (known after apply)
+      + tty                                         = false
+      + wait                                        = false
+      + wait_timeout                                = 60
+
+      + healthcheck (known after apply)
+
+      + labels (known after apply)
+
+      + networks_advanced {
+          + aliases      = []
+          + name         = "bytown-net-26"
+            # (3 unchanged attributes hidden)
+        }
+
+      + ports {
+          + external = 8527
+          + internal = 80
+          + ip       = "0.0.0.0"
+          + protocol = "tcp"
+        }
+
+      + upload {
+          + content        = <<-EOT
+                <h1>Bytown NetOps</h1><p>Seed: 26, instance: 1</p>
+            EOT
+          + executable     = false
+          + file           = "/usr/share/nginx/html/index.html"
+            # (4 unchanged attributes hidden)
+        }
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.
